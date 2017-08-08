@@ -1,9 +1,10 @@
 {
-  "name": "ssh-mapper",
-  "version": "1.0.0",
+  "name": "rasbpi-guest-log",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "rm auth.log && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
