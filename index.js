@@ -23,7 +23,7 @@ global.execute = () => {
 
   ready.then(() => {
 
-    let logObservable = Rx.Observable.create(function subscribe(observer) {
+    let failedLoginObservable = Rx.Observable.create(function subscribe(observer) {
       let tail = new Tail(LOGFILE);
       tail.on('line',  line => observer.next(line));
       tail.on('error', error => observer.error(error));
@@ -42,7 +42,7 @@ global.execute = () => {
       return null;
     }).filter(log => !!log);
 
-    logObservable.subscribe(({date, ip}) => {
+    failedLoginObservable.subscribe(({date, ip}) => {
       console.log(ip, new Date(date).toLocaleString());
     }, console.error, console.log);
 
