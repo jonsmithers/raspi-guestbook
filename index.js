@@ -26,7 +26,7 @@ global.execute = () => {
     let logObservable = Rx.Observable.create(function subscribe(observer) {
       let tail = new Tail(LOGFILE);
       tail.on('line',  line => observer.next(line));
-      tail.on('error', observer.error);
+      tail.on('error', error => observer.error(error));
     }).map(line => {
       let matches = /(\w{3}\s+\d+\s+[0-9:]+).*?Failed password for (\w+) from ([0-9.]+)/.exec(line);
       if (matches) {
