@@ -1,9 +1,9 @@
 const Tail  = require('tail').Tail;
-const spawn = require('child_process').spawn
-const exec = require('child_process').exec
+const spawn = require('child_process').spawn;
+const exec = require('child_process').exec;
 
 const ON_RASPBERRY = false;
-const LOGFILE      = ON_RASPBERRY ? "/var/log/auth.log" : "./auth.log";
+const LOGFILE      = ON_RASPBERRY ? '/var/log/auth.log' : './auth.log';
 
 var ready = new Promise((resolve, reject) => {
   if (ON_RASPBERRY) {
@@ -19,11 +19,11 @@ var ready = new Promise((resolve, reject) => {
 });
 
 ready.then(() => {
-  tail = new Tail(LOGFILE);
-  tail.on("line",  line => {
+  let tail = new Tail(LOGFILE);
+  tail.on('line',  line => {
     console.log("NODE::", line);
   });
-  tail.on("error", console.error);
+  tail.on('error', console.error);
 
   if (!ON_RASPBERRY) {
     let testscript = spawn('bash', ['./test-append.sh']);
