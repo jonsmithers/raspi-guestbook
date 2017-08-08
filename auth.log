@@ -1,0 +1,363 @@
+Jul  5 11:45:55 raspberrypi systemd-logind[410]: New seat seat0.
+Jul  5 11:45:51 raspberrypi systemd-logind[359]: New seat seat0.
+Aug  7 01:49:22 raspberrypi login[602]: pam_unix(login:auth): check pass; user unknown
+Aug  7 01:49:22 raspberrypi login[602]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost=
+Aug  7 01:49:25 raspberrypi login[602]: FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+Aug  7 01:49:31 raspberrypi login[602]: pam_unix(login:session): session opened for user pi by LOGIN(uid=0)
+Aug  7 01:49:34 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/passwd pi
+Aug  7 01:49:34 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 01:49:46 raspberrypi passwd[633]: pam_unix(passwd:chauthtok): password changed for pi
+Aug  7 01:49:46 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 01:51:11 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/apt update
+Aug  7 01:51:11 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 01:53:02 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 01:53:11 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/apt install node
+Aug  7 01:53:11 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 01:56:05 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 01:56:39 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/apt remove node
+Aug  7 01:56:39 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 01:57:26 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 01:57:40 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/apt install npm
+Aug  7 01:57:40 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:02:29 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:05:17 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/npm install -g http-server
+Aug  7 02:05:17 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:06:21 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:07:26 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/apt purge node
+Aug  7 02:07:26 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:09:16 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:10:06 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/apt purge npm
+Aug  7 02:10:06 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:11:38 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:12:51 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/dpkg -i node_latest_armhf.deb
+Aug  7 02:12:51 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:13:30 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:14:45 raspberrypi login[602]: pam_unix(login:session): session closed for user pi
+Aug  7 02:14:49 raspberrypi login[13374]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=pi
+Aug  7 02:14:53 raspberrypi login[13374]: FAILED LOGIN (1) on '/dev/tty1' FOR 'pi', Authentication failure
+Aug  7 02:14:58 raspberrypi login[13374]: pam_unix(login:session): session opened for user pi by LOGIN(uid=0)
+Aug  7 02:15:08 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/apt purge node
+Aug  7 02:15:08 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:15:51 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:17:01 raspberrypi CRON[13427]: pam_unix(cron:session): session opened for user root by (uid=0)
+Aug  7 02:17:02 raspberrypi CRON[13427]: pam_unix(cron:session): session closed for user root
+Aug  7 02:17:28 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/bin/bash setupnode
+Aug  7 02:17:28 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:17:28 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:18:53 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/apt install nodejs npm
+Aug  7 02:18:53 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:20:28 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:20:59 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/npm install -g http-server
+Aug  7 02:20:59 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:22:05 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:23:07 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/usr/bin ; USER=root ; COMMAND=/bin/ln -s node nodejs
+Aug  7 02:23:07 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:23:07 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:24:17 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/usr/bin ; USER=root ; COMMAND=/bin/ln -s nodejs node
+Aug  7 02:24:17 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:24:17 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:25:29 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi/static ; USER=root ; COMMAND=/usr/bin/apt install screen
+Aug  7 02:25:29 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:26:29 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:28:37 raspberrypi sudo:       pi : TTY=pts/0 ; PWD=/home/pi/static ; USER=root ; COMMAND=/usr/local/bin/http-server -p 80
+Aug  7 02:28:37 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:56:10 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:56:12 raspberrypi sudo:       pi : TTY=pts/0 ; PWD=/home/pi/static ; USER=root ; COMMAND=/usr/local/bin/http-server -p 80
+Aug  7 02:56:12 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:56:23 raspberrypi sudo:       pi : TTY=tty1 ; PWD=/home/pi/static ; USER=root ; COMMAND=/usr/bin/raspi-config
+Aug  7 02:56:23 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 02:56:37 raspberrypi sshd[16257]: Server listening on 0.0.0.0 port 22.
+Aug  7 02:56:37 raspberrypi sshd[16257]: Server listening on :: port 22.
+Aug  7 02:56:41 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 02:56:49 raspberrypi sshd[16264]: Connection closed by 192.168.1.1 [preauth]
+Aug  7 02:57:10 raspberrypi sshd[16266]: reverse mapping checking getaddrinfo for 201-180-123-136.speedy.com.ar [201.180.123.136] failed - POSSIBLE BREAK-IN ATTEMPT!
+Aug  7 02:57:10 raspberrypi sshd[16266]: Invalid user admin from 201.180.123.136
+Aug  7 02:57:10 raspberrypi sshd[16266]: input_userauth_request: invalid user admin [preauth]
+Aug  7 02:57:11 raspberrypi sshd[16266]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 02:57:11 raspberrypi sshd[16266]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=201.180.123.136
+Aug  7 02:57:13 raspberrypi sshd[16268]: Connection closed by 192.168.1.1 [preauth]
+Aug  7 02:57:13 raspberrypi sshd[16266]: Failed password for invalid user admin from 201.180.123.136 port 42767 ssh2
+Aug  7 02:57:14 raspberrypi sshd[16266]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 02:57:16 raspberrypi sshd[16266]: Failed password for invalid user admin from 201.180.123.136 port 42767 ssh2
+Aug  7 02:57:16 raspberrypi sshd[16266]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 02:57:18 raspberrypi sshd[16266]: Failed password for invalid user admin from 201.180.123.136 port 42767 ssh2
+Aug  7 02:57:18 raspberrypi sshd[16266]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 02:57:21 raspberrypi sshd[16266]: Failed password for invalid user admin from 201.180.123.136 port 42767 ssh2
+Aug  7 02:57:21 raspberrypi sshd[16266]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 02:57:23 raspberrypi sshd[16266]: Failed password for invalid user admin from 201.180.123.136 port 42767 ssh2
+Aug  7 02:57:23 raspberrypi sshd[16266]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 02:57:25 raspberrypi sshd[16273]: Accepted password for pi from 192.168.1.1 port 40552 ssh2
+Aug  7 02:57:25 raspberrypi sshd[16273]: pam_unix(sshd:session): session opened for user pi by (uid=0)
+Aug  7 02:57:25 raspberrypi sshd[16266]: Failed password for invalid user admin from 201.180.123.136 port 42767 ssh2
+Aug  7 02:57:25 raspberrypi sshd[16266]: Disconnecting: Too many authentication failures for invalid user admin from 201.180.123.136 port 42767 ssh2 [preauth]
+Aug  7 02:57:25 raspberrypi sshd[16266]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=201.180.123.136
+Aug  7 02:57:25 raspberrypi sshd[16266]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 02:57:38 raspberrypi sshd[16298]: Received disconnect from 59.45.175.56: 11:  [preauth]
+Aug  7 02:58:08 raspberrypi sshd[16310]: Received disconnect from 121.18.238.28: 11:  [preauth]
+Aug  7 03:01:48 raspberrypi sshd[16313]: reverse mapping checking getaddrinfo for adsl-new58-l106.crnagora.net [78.155.58.105] failed - POSSIBLE BREAK-IN ATTEMPT!
+Aug  7 03:01:48 raspberrypi sshd[16313]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=78.155.58.105  user=root
+Aug  7 03:01:50 raspberrypi sshd[16313]: Failed password for root from 78.155.58.105 port 35683 ssh2
+Aug  7 03:01:52 raspberrypi sshd[16313]: Failed password for root from 78.155.58.105 port 35683 ssh2
+Aug  7 03:01:55 raspberrypi sshd[16313]: Failed password for root from 78.155.58.105 port 35683 ssh2
+Aug  7 03:01:57 raspberrypi sshd[16313]: Failed password for root from 78.155.58.105 port 35683 ssh2
+Aug  7 03:01:59 raspberrypi sshd[16313]: Failed password for root from 78.155.58.105 port 35683 ssh2
+Aug  7 03:02:02 raspberrypi sshd[16313]: Failed password for root from 78.155.58.105 port 35683 ssh2
+Aug  7 03:02:02 raspberrypi sshd[16313]: Disconnecting: Too many authentication failures for root from 78.155.58.105 port 35683 ssh2 [preauth]
+Aug  7 03:02:02 raspberrypi sshd[16313]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=78.155.58.105  user=root
+Aug  7 03:02:02 raspberrypi sshd[16313]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 03:05:20 raspberrypi sshd[16324]: Received disconnect from 121.18.238.28: 11:  [preauth]
+Aug  7 03:07:51 raspberrypi sshd[16351]: Received disconnect from 59.45.175.56: 11:  [preauth]
+Aug  7 03:08:17 raspberrypi sudo:       pi : TTY=pts/1 ; PWD=/home/pi/static ; USER=root ; COMMAND=/usr/bin/apt install git
+Aug  7 03:08:17 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 03:10:28 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 03:10:59 raspberrypi sshd[19379]: reverse mapping checking getaddrinfo for 167.194.214.190.static.anycast.cnt-grms.ec [190.214.194.167] failed - POSSIBLE BREAK-IN ATTEMPT!
+Aug  7 03:10:59 raspberrypi sshd[19379]: Invalid user admin from 190.214.194.167
+Aug  7 03:10:59 raspberrypi sshd[19379]: input_userauth_request: invalid user admin [preauth]
+Aug  7 03:10:59 raspberrypi sshd[19379]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:10:59 raspberrypi sshd[19379]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=190.214.194.167
+Aug  7 03:11:01 raspberrypi sshd[19379]: Failed password for invalid user admin from 190.214.194.167 port 40924 ssh2
+Aug  7 03:11:01 raspberrypi sshd[19379]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:11:03 raspberrypi sshd[19379]: Failed password for invalid user admin from 190.214.194.167 port 40924 ssh2
+Aug  7 03:11:03 raspberrypi sshd[19379]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:11:05 raspberrypi sshd[19379]: Failed password for invalid user admin from 190.214.194.167 port 40924 ssh2
+Aug  7 03:11:05 raspberrypi sshd[19379]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:11:07 raspberrypi sshd[19379]: Failed password for invalid user admin from 190.214.194.167 port 40924 ssh2
+Aug  7 03:11:07 raspberrypi sshd[19379]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:11:09 raspberrypi sshd[19379]: Failed password for invalid user admin from 190.214.194.167 port 40924 ssh2
+Aug  7 03:11:09 raspberrypi sshd[19379]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:11:11 raspberrypi sshd[19379]: Failed password for invalid user admin from 190.214.194.167 port 40924 ssh2
+Aug  7 03:11:11 raspberrypi sshd[19379]: Disconnecting: Too many authentication failures for invalid user admin from 190.214.194.167 port 40924 ssh2 [preauth]
+Aug  7 03:11:11 raspberrypi sshd[19379]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=190.214.194.167
+Aug  7 03:11:11 raspberrypi sshd[19379]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 03:11:36 raspberrypi sshd[16281]: Received disconnect from 192.168.1.1: 11: disconnected by user
+Aug  7 03:11:36 raspberrypi sshd[16273]: pam_unix(sshd:session): session closed for user pi
+Aug  7 03:12:26 raspberrypi sshd[19393]: Received disconnect from 121.18.238.28: 11:  [preauth]
+Aug  7 03:16:08 raspberrypi sshd[19395]: Received disconnect from 59.45.175.56: 11:  [preauth]
+Aug  7 03:17:01 raspberrypi CRON[19397]: pam_unix(cron:session): session opened for user root by (uid=0)
+Aug  7 03:17:01 raspberrypi CRON[19397]: pam_unix(cron:session): session closed for user root
+Aug  7 03:24:21 raspberrypi sshd[19413]: Received disconnect from 59.45.175.56: 11:  [preauth]
+Aug  7 03:26:28 raspberrypi sshd[19416]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.1  user=pi
+Aug  7 03:26:29 raspberrypi sshd[19416]: Failed password for pi from 192.168.1.1 port 42208 ssh2
+Aug  7 03:26:32 raspberrypi sshd[19416]: Accepted password for pi from 192.168.1.1 port 42208 ssh2
+Aug  7 03:26:32 raspberrypi sshd[19416]: pam_unix(sshd:session): session opened for user pi by (uid=0)
+Aug  7 03:28:02 raspberrypi sshd[19456]: Connection closed by 179.130.100.238 [preauth]
+Aug  7 03:33:54 raspberrypi sshd[19474]: Received disconnect from 59.45.175.56: 11:  [preauth]
+Aug  7 03:37:49 raspberrypi sshd[19479]: Invalid user admin from 128.52.128.105
+Aug  7 03:37:49 raspberrypi sshd[19479]: input_userauth_request: invalid user admin [preauth]
+Aug  7 03:37:49 raspberrypi sshd[19479]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:37:49 raspberrypi sshd[19479]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=tor-exit.csail.mit.edu
+Aug  7 03:37:51 raspberrypi sshd[19479]: Failed password for invalid user admin from 128.52.128.105 port 37380 ssh2
+Aug  7 03:37:51 raspberrypi sshd[19479]: Connection closed by 128.52.128.105 [preauth]
+Aug  7 03:37:53 raspberrypi sshd[19483]: reverse mapping checking getaddrinfo for ostwald.balticservers.eu [46.166.162.53] failed - POSSIBLE BREAK-IN ATTEMPT!
+Aug  7 03:37:53 raspberrypi sshd[19483]: Invalid user admin from 46.166.162.53
+Aug  7 03:37:53 raspberrypi sshd[19483]: input_userauth_request: invalid user admin [preauth]
+Aug  7 03:37:53 raspberrypi sshd[19483]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:37:53 raspberrypi sshd[19483]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=46.166.162.53
+Aug  7 03:37:56 raspberrypi sshd[19483]: Failed password for invalid user admin from 46.166.162.53 port 35615 ssh2
+Aug  7 03:37:56 raspberrypi sshd[19483]: Connection closed by 46.166.162.53 [preauth]
+Aug  7 03:37:58 raspberrypi sshd[19487]: Invalid user admin from 5.196.1.129
+Aug  7 03:37:58 raspberrypi sshd[19487]: input_userauth_request: invalid user admin [preauth]
+Aug  7 03:37:58 raspberrypi sshd[19487]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 03:37:58 raspberrypi sshd[19487]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=tor.thd.ninja
+Aug  7 03:38:00 raspberrypi sshd[19487]: Failed password for invalid user admin from 5.196.1.129 port 46502 ssh2
+Aug  7 03:38:00 raspberrypi sshd[19487]: Connection closed by 5.196.1.129 [preauth]
+Aug  7 03:38:43 raspberrypi sudo:       pi : TTY=pts/1 ; PWD=/home/pi/static ; USER=root ; COMMAND=/usr/bin/apt install vim
+Aug  7 03:38:43 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 03:40:20 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 03:41:01 raspberrypi sshd[19842]: Received disconnect from 59.45.175.56: 11:  [preauth]
+Aug  7 03:43:12 raspberrypi sshd[20076]: Received disconnect from 59.45.175.62: 11:  [preauth]
+Aug  7 03:46:38 raspberrypi sshd[20420]: Received disconnect from 221.194.47.233: 11:  [preauth]
+Aug  7 03:51:13 raspberrypi sshd[20673]: Received disconnect from 221.194.44.212: 11:  [preauth]
+Aug  7 03:54:33 raspberrypi sudo:       pi : TTY=pts/1 ; PWD=/home/pi/static ; USER=root ; COMMAND=/sbin/shutdown
+Aug  7 03:54:33 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 03:54:33 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 03:55:13 raspberrypi sudo:       pi : TTY=pts/1 ; PWD=/home/pi/static ; USER=root ; COMMAND=/sbin/shutdown --now
+Aug  7 03:55:13 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 03:55:13 raspberrypi sudo: pam_unix(sudo:session): session closed for user root
+Aug  7 03:55:46 raspberrypi systemd-logind[383]: New seat seat0.
+Aug  7 03:55:57 raspberrypi sshd[545]: Server listening on 0.0.0.0 port 22.
+Aug  7 03:55:57 raspberrypi sshd[545]: Server listening on :: port 22.
+Aug  7 03:57:12 raspberrypi sshd[573]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.1  user=pi
+Aug  7 03:57:14 raspberrypi sshd[573]: Failed password for pi from 192.168.1.1 port 43300 ssh2
+Aug  7 03:57:16 raspberrypi sshd[573]: Accepted password for pi from 192.168.1.1 port 43300 ssh2
+Aug  7 03:57:17 raspberrypi sshd[573]: pam_unix(sshd:session): session opened for user pi by (uid=0)
+Aug  7 03:57:26 raspberrypi sshd[620]: Received disconnect from 121.18.238.123: 11:  [preauth]
+Aug  7 03:57:45 raspberrypi sudo:       pi : TTY=pts/1 ; PWD=/home/pi/static ; USER=root ; COMMAND=/usr/local/bin/http-server -p 80
+Aug  7 03:57:45 raspberrypi sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Aug  7 03:57:57 raspberrypi sshd[673]: Received disconnect from 221.194.47.242: 11:  [preauth]
+Aug  7 04:05:55 raspberrypi sshd[580]: Received disconnect from 192.168.1.1: 11: disconnected by user
+Aug  7 04:05:55 raspberrypi sshd[573]: pam_unix(sshd:session): session closed for user pi
+Aug  7 04:11:45 raspberrypi sshd[710]: Accepted password for pi from 192.168.1.1 port 45170 ssh2
+Aug  7 04:11:45 raspberrypi sshd[710]: pam_unix(sshd:session): session opened for user pi by (uid=0)
+Aug  7 04:14:47 raspberrypi sshd[810]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=cm-171-101-238-232.revip11.asianet.co.th  user=root
+Aug  7 04:14:49 raspberrypi sshd[810]: Failed password for root from 171.101.238.232 port 37958 ssh2
+Aug  7 04:14:50 raspberrypi sshd[812]: Invalid user support from 171.101.238.232
+Aug  7 04:14:50 raspberrypi sshd[812]: input_userauth_request: invalid user support [preauth]
+Aug  7 04:14:50 raspberrypi sshd[812]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 04:14:50 raspberrypi sshd[812]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=cm-171-101-238-232.revip11.asianet.co.th
+Aug  7 04:14:52 raspberrypi sshd[810]: Failed password for root from 171.101.238.232 port 37958 ssh2
+Aug  7 04:14:52 raspberrypi sshd[812]: Failed password for invalid user support from 171.101.238.232 port 37996 ssh2
+Aug  7 04:14:53 raspberrypi sshd[812]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 04:14:54 raspberrypi sshd[810]: Failed password for root from 171.101.238.232 port 37958 ssh2
+Aug  7 04:14:55 raspberrypi sshd[812]: Failed password for invalid user support from 171.101.238.232 port 37996 ssh2
+Aug  7 04:14:55 raspberrypi sshd[812]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 04:14:56 raspberrypi sshd[810]: Failed password for root from 171.101.238.232 port 37958 ssh2
+Aug  7 04:14:57 raspberrypi sshd[812]: Failed password for invalid user support from 171.101.238.232 port 37996 ssh2
+Aug  7 04:14:57 raspberrypi sshd[812]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 04:14:59 raspberrypi sshd[810]: Failed password for root from 171.101.238.232 port 37958 ssh2
+Aug  7 04:15:00 raspberrypi sshd[812]: Failed password for invalid user support from 171.101.238.232 port 37996 ssh2
+Aug  7 04:15:00 raspberrypi sshd[812]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 04:15:01 raspberrypi sshd[810]: Failed password for root from 171.101.238.232 port 37958 ssh2
+Aug  7 04:15:01 raspberrypi sshd[810]: Disconnecting: Too many authentication failures for root from 171.101.238.232 port 37958 ssh2 [preauth]
+Aug  7 04:15:01 raspberrypi sshd[810]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=cm-171-101-238-232.revip11.asianet.co.th  user=root
+Aug  7 04:15:01 raspberrypi sshd[810]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 04:15:02 raspberrypi sshd[812]: Failed password for invalid user support from 171.101.238.232 port 37996 ssh2
+Aug  7 04:15:02 raspberrypi sshd[812]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 04:15:04 raspberrypi sshd[812]: Failed password for invalid user support from 171.101.238.232 port 37996 ssh2
+Aug  7 04:15:04 raspberrypi sshd[812]: Disconnecting: Too many authentication failures for invalid user support from 171.101.238.232 port 37996 ssh2 [preauth]
+Aug  7 04:15:04 raspberrypi sshd[812]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=cm-171-101-238-232.revip11.asianet.co.th
+Aug  7 04:15:04 raspberrypi sshd[812]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 04:17:01 raspberrypi CRON[834]: pam_unix(cron:session): session opened for user root by (uid=0)
+Aug  7 04:17:01 raspberrypi CRON[834]: pam_unix(cron:session): session closed for user root
+Aug  7 04:19:05 raspberrypi sshd[716]: Received disconnect from 192.168.1.1: 11: disconnected by user
+Aug  7 04:19:05 raspberrypi sshd[710]: pam_unix(sshd:session): session closed for user pi
+Aug  7 04:24:16 raspberrypi sshd[860]: Received disconnect from 59.45.175.64: 11:  [preauth]
+Aug  7 04:58:17 raspberrypi sshd[862]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=222.186.61.176  user=root
+Aug  7 04:58:19 raspberrypi sshd[862]: Failed password for root from 222.186.61.176 port 47859 ssh2
+Aug  7 04:58:21 raspberrypi sshd[862]: Failed password for root from 222.186.61.176 port 47859 ssh2
+Aug  7 04:58:24 raspberrypi sshd[862]: Failed password for root from 222.186.61.176 port 47859 ssh2
+Aug  7 04:58:26 raspberrypi sshd[862]: Failed password for root from 222.186.61.176 port 47859 ssh2
+Aug  7 04:58:29 raspberrypi sshd[862]: Failed password for root from 222.186.61.176 port 47859 ssh2
+Aug  7 04:58:32 raspberrypi sshd[862]: Failed password for root from 222.186.61.176 port 47859 ssh2
+Aug  7 04:58:32 raspberrypi sshd[862]: Disconnecting: Too many authentication failures for root from 222.186.61.176 port 47859 ssh2 [preauth]
+Aug  7 04:58:32 raspberrypi sshd[862]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=222.186.61.176  user=root
+Aug  7 04:58:32 raspberrypi sshd[862]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 05:10:53 raspberrypi sshd[871]: Received disconnect from 59.45.175.67: 11:  [preauth]
+Aug  7 05:12:26 raspberrypi sshd[873]: Received disconnect from 221.194.44.212: 11:  [preauth]
+Aug  7 05:16:41 raspberrypi sshd[876]: Received disconnect from 121.18.238.125: 11:  [preauth]
+Aug  7 05:17:01 raspberrypi CRON[878]: pam_unix(cron:session): session opened for user root by (uid=0)
+Aug  7 05:17:01 raspberrypi CRON[878]: pam_unix(cron:session): session closed for user root
+Aug  7 05:17:14 raspberrypi sshd[894]: Received disconnect from 121.18.238.28: 11:  [preauth]
+Aug  7 05:18:27 raspberrypi sshd[896]: Received disconnect from 59.45.175.66: 11:  [preauth]
+Aug  7 05:29:50 raspberrypi sshd[898]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=62-64-167-76.dynamic.dial.as9105.com  user=root
+Aug  7 05:29:51 raspberrypi sshd[898]: Failed password for root from 62.64.167.76 port 36594 ssh2
+Aug  7 05:29:54 raspberrypi sshd[898]: Failed password for root from 62.64.167.76 port 36594 ssh2
+Aug  7 05:29:56 raspberrypi sshd[898]: Failed password for root from 62.64.167.76 port 36594 ssh2
+Aug  7 05:29:58 raspberrypi sshd[898]: Failed password for root from 62.64.167.76 port 36594 ssh2
+Aug  7 05:30:00 raspberrypi sshd[898]: Failed password for root from 62.64.167.76 port 36594 ssh2
+Aug  7 05:30:02 raspberrypi sshd[898]: Failed password for root from 62.64.167.76 port 36594 ssh2
+Aug  7 05:30:02 raspberrypi sshd[898]: Disconnecting: Too many authentication failures for root from 62.64.167.76 port 36594 ssh2 [preauth]
+Aug  7 05:30:03 raspberrypi sshd[898]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=62-64-167-76.dynamic.dial.as9105.com  user=root
+Aug  7 05:30:03 raspberrypi sshd[898]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 05:47:44 raspberrypi sshd[907]: Received disconnect from 59.45.175.64: 11:  [preauth]
+Aug  7 05:53:32 raspberrypi sshd[909]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.87.50.65  user=root
+Aug  7 05:53:34 raspberrypi sshd[909]: Failed password for root from 112.87.50.65 port 40550 ssh2
+Aug  7 05:53:37 raspberrypi sshd[909]: Failed password for root from 112.87.50.65 port 40550 ssh2
+Aug  7 05:53:39 raspberrypi sshd[909]: Failed password for root from 112.87.50.65 port 40550 ssh2
+Aug  7 05:53:41 raspberrypi sshd[909]: Failed password for root from 112.87.50.65 port 40550 ssh2
+Aug  7 05:53:43 raspberrypi sshd[909]: Failed password for root from 112.87.50.65 port 40550 ssh2
+Aug  7 05:53:45 raspberrypi sshd[909]: Failed password for root from 112.87.50.65 port 40550 ssh2
+Aug  7 05:53:46 raspberrypi sshd[909]: Disconnecting: Too many authentication failures for root from 112.87.50.65 port 40550 ssh2 [preauth]
+Aug  7 05:53:46 raspberrypi sshd[909]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.87.50.65  user=root
+Aug  7 05:53:46 raspberrypi sshd[909]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 06:00:25 raspberrypi sshd[919]: Received disconnect from 159.203.104.247: 11: Bye Bye [preauth]
+Aug  7 06:17:01 raspberrypi CRON[921]: pam_unix(cron:session): session opened for user root by (uid=0)
+Aug  7 06:17:02 raspberrypi CRON[921]: pam_unix(cron:session): session closed for user root
+Aug  7 06:25:01 raspberrypi CRON[938]: pam_unix(cron:session): session opened for user root by (uid=0)
+Aug  7 06:25:10 raspberrypi CRON[938]: pam_unix(cron:session): session closed for user root
+Aug  7 06:32:33 raspberrypi sshd[1067]: Received disconnect from 121.18.238.28: 11:  [preauth]
+Aug  7 06:33:39 raspberrypi sshd[1070]: Received disconnect from 59.45.175.11: 11:  [preauth]
+Aug  7 06:33:41 raspberrypi sshd[1072]: Received disconnect from 221.194.47.233: 11:  [preauth]
+Aug  7 06:35:47 raspberrypi sshd[1074]: Received disconnect from 45.114.128.135: 11: Bye Bye [preauth]
+Aug  7 06:37:24 raspberrypi sshd[1076]: Received disconnect from 121.18.238.123: 11:  [preauth]
+Aug  7 06:47:07 raspberrypi sshd[1078]: Received disconnect from 59.45.175.62: 11:  [preauth]
+Aug  7 07:01:36 raspberrypi sshd[1080]: Received disconnect from 60.205.202.48: 11: Bye Bye [preauth]
+Aug  7 07:14:22 raspberrypi sshd[1082]: Received disconnect from 221.194.47.224: 11:  [preauth]
+Aug  7 07:17:01 raspberrypi CRON[1084]: pam_unix(cron:session): session opened for user root by (uid=0)
+Aug  7 07:17:02 raspberrypi CRON[1084]: pam_unix(cron:session): session closed for user root
+Aug  7 07:23:13 raspberrypi sshd[1100]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=114.255.78.180  user=root
+Aug  7 07:23:14 raspberrypi sshd[1100]: Failed password for root from 114.255.78.180 port 50640 ssh2
+Aug  7 07:23:17 raspberrypi sshd[1100]: Failed password for root from 114.255.78.180 port 50640 ssh2
+Aug  7 07:23:19 raspberrypi sshd[1100]: Failed password for root from 114.255.78.180 port 50640 ssh2
+Aug  7 07:23:21 raspberrypi sshd[1100]: Failed password for root from 114.255.78.180 port 50640 ssh2
+Aug  7 07:23:23 raspberrypi sshd[1100]: Failed password for root from 114.255.78.180 port 50640 ssh2
+Aug  7 07:23:25 raspberrypi sshd[1100]: Failed password for root from 114.255.78.180 port 50640 ssh2
+Aug  7 07:23:25 raspberrypi sshd[1100]: Disconnecting: Too many authentication failures for root from 114.255.78.180 port 50640 ssh2 [preauth]
+Aug  7 07:23:25 raspberrypi sshd[1100]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=114.255.78.180  user=root
+Aug  7 07:23:25 raspberrypi sshd[1100]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 07:32:11 raspberrypi sshd[1109]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=121.141.169.112  user=root
+Aug  7 07:32:13 raspberrypi sshd[1109]: Failed password for root from 121.141.169.112 port 60694 ssh2
+Aug  7 07:32:15 raspberrypi sshd[1109]: Failed password for root from 121.141.169.112 port 60694 ssh2
+Aug  7 07:32:17 raspberrypi sshd[1109]: Failed password for root from 121.141.169.112 port 60694 ssh2
+Aug  7 07:32:19 raspberrypi sshd[1109]: Failed password for root from 121.141.169.112 port 60694 ssh2
+Aug  7 07:32:21 raspberrypi sshd[1109]: Failed password for root from 121.141.169.112 port 60694 ssh2
+Aug  7 07:32:23 raspberrypi sshd[1109]: Failed password for root from 121.141.169.112 port 60694 ssh2
+Aug  7 07:32:23 raspberrypi sshd[1109]: Disconnecting: Too many authentication failures for root from 121.141.169.112 port 60694 ssh2 [preauth]
+Aug  7 07:32:23 raspberrypi sshd[1109]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=121.141.169.112  user=root
+Aug  7 07:32:23 raspberrypi sshd[1109]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 07:41:03 raspberrypi sshd[1118]: Did not receive identification string from 169.54.233.116
+Aug  7 07:46:42 raspberrypi sshd[1120]: Did not receive identification string from 139.162.75.112
+Aug  7 07:57:14 raspberrypi sshd[1121]: Received disconnect from 121.18.238.106: 11:  [preauth]
+Aug  7 07:58:45 raspberrypi sshd[1123]: Received disconnect from 121.18.238.119: 11:  [preauth]
+Aug  7 08:01:53 raspberrypi sshd[1125]: Received disconnect from 121.18.238.106: 11:  [preauth]
+Aug  7 08:02:19 raspberrypi sshd[1127]: Received disconnect from 59.45.175.67: 11:  [preauth]
+Aug  7 08:08:25 raspberrypi sshd[1129]: Received disconnect from 121.18.238.106: 11:  [preauth]
+Aug  7 08:08:31 raspberrypi sshd[1131]: Received disconnect from 221.194.47.233: 11:  [preauth]
+Aug  7 08:15:02 raspberrypi sshd[1133]: Received disconnect from 121.18.238.125: 11:  [preauth]
+Aug  7 08:17:01 raspberrypi CRON[1135]: pam_unix(cron:session): session opened for user root by (uid=0)
+Aug  7 08:17:01 raspberrypi CRON[1135]: pam_unix(cron:session): session closed for user root
+Aug  7 08:21:34 raspberrypi sshd[1151]: Received disconnect from 121.18.238.123: 11:  [preauth]
+Aug  7 08:22:36 raspberrypi sshd[1153]: Received disconnect from 121.18.238.119: 11:  [preauth]
+Aug  7 08:28:27 raspberrypi sshd[1155]: Received disconnect from 121.18.238.125: 11:  [preauth]
+Aug  7 08:34:46 raspberrypi sshd[1157]: Received disconnect from 121.18.238.123: 11:  [preauth]
+Aug  7 08:56:41 raspberrypi sshd[1160]: reverse mapping checking getaddrinfo for 201-179-48-144.speedy.com.ar [201.179.48.144] failed - POSSIBLE BREAK-IN ATTEMPT!
+Aug  7 08:56:41 raspberrypi sshd[1160]: Invalid user admin from 201.179.48.144
+Aug  7 08:56:41 raspberrypi sshd[1160]: input_userauth_request: invalid user admin [preauth]
+Aug  7 08:56:41 raspberrypi sshd[1160]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:41 raspberrypi sshd[1160]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=201.179.48.144
+Aug  7 08:56:42 raspberrypi sshd[1161]: reverse mapping checking getaddrinfo for 201-179-48-144.speedy.com.ar [201.179.48.144] failed - POSSIBLE BREAK-IN ATTEMPT!
+Aug  7 08:56:42 raspberrypi sshd[1161]: Invalid user admin from 201.179.48.144
+Aug  7 08:56:42 raspberrypi sshd[1161]: input_userauth_request: invalid user admin [preauth]
+Aug  7 08:56:42 raspberrypi sshd[1161]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:42 raspberrypi sshd[1161]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=201.179.48.144
+Aug  7 08:56:44 raspberrypi sshd[1160]: Failed password for invalid user admin from 201.179.48.144 port 40742 ssh2
+Aug  7 08:56:44 raspberrypi sshd[1160]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:44 raspberrypi sshd[1161]: Failed password for invalid user admin from 201.179.48.144 port 40749 ssh2
+Aug  7 08:56:45 raspberrypi sshd[1161]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:46 raspberrypi sshd[1160]: Failed password for invalid user admin from 201.179.48.144 port 40742 ssh2
+Aug  7 08:56:46 raspberrypi sshd[1160]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:46 raspberrypi sshd[1161]: Failed password for invalid user admin from 201.179.48.144 port 40749 ssh2
+Aug  7 08:56:47 raspberrypi sshd[1161]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:48 raspberrypi sshd[1160]: Failed password for invalid user admin from 201.179.48.144 port 40742 ssh2
+Aug  7 08:56:48 raspberrypi sshd[1160]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:49 raspberrypi sshd[1167]: reverse mapping checking getaddrinfo for 201-179-48-144.speedy.com.ar [201.179.48.144] failed - POSSIBLE BREAK-IN ATTEMPT!
+Aug  7 08:56:49 raspberrypi sshd[1167]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=201.179.48.144  user=root
+Aug  7 08:56:49 raspberrypi sshd[1161]: Failed password for invalid user admin from 201.179.48.144 port 40749 ssh2
+Aug  7 08:56:49 raspberrypi sshd[1161]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:50 raspberrypi sshd[1160]: Failed password for invalid user admin from 201.179.48.144 port 40742 ssh2
+Aug  7 08:56:51 raspberrypi sshd[1160]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:51 raspberrypi sshd[1167]: Failed password for root from 201.179.48.144 port 40765 ssh2
+Aug  7 08:56:51 raspberrypi sshd[1161]: Failed password for invalid user admin from 201.179.48.144 port 40749 ssh2
+Aug  7 08:56:52 raspberrypi sshd[1161]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:53 raspberrypi sshd[1160]: Failed password for invalid user admin from 201.179.48.144 port 40742 ssh2
+Aug  7 08:56:54 raspberrypi sshd[1161]: Failed password for invalid user admin from 201.179.48.144 port 40749 ssh2
+Aug  7 08:56:54 raspberrypi sshd[1160]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:54 raspberrypi sshd[1167]: Failed password for root from 201.179.48.144 port 40765 ssh2
+Aug  7 08:56:54 raspberrypi sshd[1161]: pam_unix(sshd:auth): check pass; user unknown
+Aug  7 08:56:56 raspberrypi sshd[1178]: reverse mapping checking getaddrinfo for 201-179-48-144.speedy.com.ar [201.179.48.144] failed - POSSIBLE BREAK-IN ATTEMPT!
+Aug  7 08:56:56 raspberrypi sshd[1178]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=201.179.48.144  user=root
+Aug  7 08:56:56 raspberrypi sshd[1160]: Failed password for invalid user admin from 201.179.48.144 port 40742 ssh2
+Aug  7 08:56:56 raspberrypi sshd[1160]: Disconnecting: Too many authentication failures for invalid user admin from 201.179.48.144 port 40742 ssh2 [preauth]
+Aug  7 08:56:56 raspberrypi sshd[1160]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=201.179.48.144
+Aug  7 08:56:56 raspberrypi sshd[1160]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 08:56:56 raspberrypi sshd[1161]: Failed password for invalid user admin from 201.179.48.144 port 40749 ssh2
+Aug  7 08:56:57 raspberrypi sshd[1161]: Disconnecting: Too many authentication failures for invalid user admin from 201.179.48.144 port 40749 ssh2 [preauth]
+Aug  7 08:56:57 raspberrypi sshd[1161]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=201.179.48.144
+Aug  7 08:56:57 raspberrypi sshd[1161]: PAM service(sshd) ignoring max retries; 6 > 3
+Aug  7 08:56:57 raspberrypi sshd[1167]: Failed password for root from 201.179.48.144 port 40765 ssh2
+Aug  7 08:56:58 raspberrypi sshd[1178]: Failed password for root from 201.179.48.144 port 40795 ssh2
+Aug  7 08:56:59 raspberrypi sshd[1167]: Failed password for root from 201.179.48.144 port 40765 ssh2
+Aug  7 08:57:01 raspberrypi sshd[1178]: Failed password for root from 201.179.48.144 port 40795 ssh2
+Aug  7 08:57:01 raspberrypi sshd[1167]: Failed password for root from 201.179.48.144 port 40765 ssh2
+Aug  7 08:57:03 raspberrypi sshd[1167]: Failed password for root from 201.179.48.144 port 40765 ssh2
+Aug  7 08:57:03 raspberrypi sshd[1167]: Disconnecting: Too many authentication failures for root from 201.179.48.144 port 40765 ssh2 [preauth]
