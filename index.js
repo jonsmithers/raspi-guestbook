@@ -1,7 +1,7 @@
-const Tail  = require('tail').Tail;
-const spawn = require('child_process').spawn;
-const exec  = require('child_process').exec;
 const Rx    = require('rx');
+const Tail  = require('tail').Tail;
+const exec  = require('child_process').exec;
+const spawn = require('child_process').spawn;
 
 const ON_RASPBERRY = false;
 const LOGFILE      = ON_RASPBERRY ? '/var/log/auth.log' : './auth.log';
