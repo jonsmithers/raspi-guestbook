@@ -21,7 +21,19 @@ var ready = new Promise((resolve, reject) => {
 ready.then(() => {
   let tail = new Tail(LOGFILE);
   tail.on('line',  line => {
-    console.log("NODE::", line);
+    // Aug  7 01:49:34
+    let matches = /(\w{3}\s+\d+\s+[0-9:]+).*?Failed password for (\w+) from ([0-9.]+)/.exec(line);
+    if (matches) {
+      let currentYear = new Date().getFullYear();
+      let [_, dateStr, user, ip] = matches;
+      let date = new Date(dateStr);
+      date.setFullYear(currentYear);
+      console.log(date.toLocaleString(), 'ip', ip);
+      var logObject = {
+        ip,
+        date: date.toJSON()
+      };
+    }
   });
   tail.on('error', console.error);
 
