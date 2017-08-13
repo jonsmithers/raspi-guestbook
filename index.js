@@ -3,6 +3,23 @@ global.LOGFILE      = global.ON_RASPBERRY ? '/var/log/auth.log' : './auth.log';
 
 const logWatcher = require('./log-watcher');
 
+const Hapi = require('hapi');
+const server = new Hapi.Server();
+server.connection({host: 'localhost', port: '8000'});
+server.route({
+  method: 'GET',
+  path:'/',
+  handler: function (request, reply) {
+    return reply('hello world');
+  }
+});
+server.start(err => {
+  if (err) {
+    throw err;
+  }
+  console.log('Server running at:', server.info.uri);
+});
+
 global.run = () => {
   logWatcher.observable.subscribe(({date, ip, user}) => {
     console.log(user, ip, new Date(date).toLocaleString());
