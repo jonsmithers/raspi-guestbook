@@ -43,13 +43,13 @@ const observable = Rx.Observable.create(function subscribe(observer) {
 
 }).filter(log => !!log);
 
-module.exports = { 
+module.exports = {
   observable,
   runTestScript() {
-    let testscript = spawn('bash', ['./test-append.sh']);
-    testscript.stderr.on('data', console.error);
-    testscript.on('exit', () => {
-      console.log("(test script has ended)");
+    return new Promise((resolve, reject) => {
+      let testscript = spawn('bash', ['./test-append.sh']);
+      testscript.stderr.on('data', reject);
+      testscript.on('exit', resolve);
     });
   }
 };
