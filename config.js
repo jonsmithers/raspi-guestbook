@@ -4,21 +4,21 @@ try {
   fileConfig = require('./config.json');
 } catch(e) {
   let isSyntaxError = (e instanceof SyntaxError);
+  let isLogfileMissing = e.message.startsWith("Cannot find module");
   if (isSyntaxError) {
     console.error(e);
+  } else if (isLogfileMissing) {
+    console.log("No log file. Using defaults.");
   } else {
-    console.log("Couldn't load log file");
+    console.error(e);
   }
 }
 
-var config = Object.assign({
-  ON_RASPBERRY: false,
-  get logFile() {
-    return (this.ON_RASPBERRY ? '/var/log/auth.log' : './auth.log');
-  }
-}, fileConfig);
+var defaults = {
+  simulateLogUpdates: true,
+  logFile: './auth.log'
+};
 
+console.log(Object.assign(defaults, fileConfig));
 
-console.log(config);
-
-module.exports = config;
+module.exports = Object.assign(defaults, fileConfig);

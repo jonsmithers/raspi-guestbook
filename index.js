@@ -1,10 +1,10 @@
-var config = require('./config');
-const server = require('./server');
+const config = require('./config');
 const logWatcher = require('./log-watcher');
+require('./server');
 
 
 global.run = () => {
-  if (!config.ON_RASPBERRY) {
+  if (config.simulateLogUpdates) {
     console.log('(starting test script)');
     logWatcher.runTestScript().then(() =>
       console.log('(test script finished)')

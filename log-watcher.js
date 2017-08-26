@@ -7,7 +7,7 @@ const config = require('./config.js');
 const observable = Rx.Observable.create(function subscribe(observer) {
 
   var whenReadyToStart = new Promise((resolve, reject) => {
-    if (config.ON_RASPBERRY) {
+    if (!config.simulateLogUpdates) {
       resolve();
     } else {
       exec(`touch ${config.logFile}`, (error, stdout, stderr) => {
