@@ -2,14 +2,15 @@ const Rx    = require('rx');
 const Tail  = require('tail').Tail;
 const exec  = require('child_process').exec;
 const spawn = require('child_process').spawn;
+const config = require('./config.js');
 
 const observable = Rx.Observable.create(function subscribe(observer) {
 
   var whenReadyToStart = new Promise((resolve, reject) => {
-    if (global.ON_RASPBERRY) {
+    if (config.ON_RASPBERRY) {
       resolve();
     } else {
-      exec(`touch ${global.LOGFILE}`, (error, stdout, stderr) => {
+      exec(`touch ${config.logFile}`, (error, stdout, stderr) => {
         if (stdout) console.log(stdout);
         if (stderr) console.log(stderr);
         if (error) return reject(error);
@@ -19,7 +20,7 @@ const observable = Rx.Observable.create(function subscribe(observer) {
   });
 
   whenReadyToStart.then(() => {
-    let tail = new Tail(global.LOGFILE);
+    let tail = new Tail(config.logFile);
     tail.on('line',  line => observer.next(line));
     tail.on('error', error => observer.error(error));
   });

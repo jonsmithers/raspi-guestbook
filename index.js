@@ -1,12 +1,10 @@
-global.ON_RASPBERRY = false;
-global.LOGFILE      = global.ON_RASPBERRY ? '/var/log/auth.log' : './auth.log';
-
+var config = require('./config');
 const server = require('./server');
 const logWatcher = require('./log-watcher');
 
 
 global.run = () => {
-  if (!global.ON_RASPBERRY) {
+  if (!config.ON_RASPBERRY) {
     console.log('(starting test script)');
     logWatcher.runTestScript().then(() =>
       console.log('(test script finished)')
